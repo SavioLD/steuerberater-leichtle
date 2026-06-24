@@ -1,7 +1,8 @@
 # Steuerkanzlei Christoph Leichtle – Karriere-Landingpage
 
-Bewerbungs-Landingpage für Meta-Kampagnen.
-Ausgeschriebene Stelle: **Finanzbuchhaltung & Lohnabrechnung in Teilzeit** (Rottweil).
+Bewerbungs-Landingpage für Meta-Kampagnen. Zwei ausgeschriebene Stellen (Rottweil):
+- **Finanzbuchhaltung & Lohn** – Teilzeit
+- **Steuerfachwirt:in / Steuerfachangestellte:r für Jahresabschlüsse & Steuererklärungen** – Vollzeit
 
 Erstellt von **Ländle Digital**.
 
