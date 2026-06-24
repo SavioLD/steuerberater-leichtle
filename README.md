@@ -10,46 +10,42 @@ Erstellt von **Ländle Digital**.
 
 | Datei / Ordner | Beschreibung |
 |---|---|
-| `index.html` | Die Landingpage (lädt `css/` + `assets/`, Schriften via Google Fonts CDN) |
-| `css/style.css`, `css/landing.css` | Design – CI-Crimson, **Oswald** (Überschriften/Logo) + **Open Sans** (Fließtext) |
+| `index.html` | **Die komplette Seite in einer Datei** – CSS **und** Schriften sind eingebettet. Keine weiteren Dateien nötig, deploy-fertig. |
 | `assets/og.png` | Social-Preview-Bild (Link-Vorschau) |
 | `assets/creatives/` | 3 Anzeigen-Creatives für Meta (4:5, 1080×1350 px, PNG) |
-| `landingpage-einzeldatei.html` | Komplette Seite als **eine** Datei (CSS **und** Schriften eingebettet) – ideal zum schnellen Teilen oder Hochladen, funktioniert auch offline |
 
-## Vorschau / lokal öffnen
-
-- **Schnell:** `landingpage-einzeldatei.html` doppelklicken.
-- **„Richtig" (mit css/ + assets/):** im Ordner einen kleinen Webserver starten:
-  ```bash
-  python3 -m http.server
-  # dann http://localhost:8000 öffnen
-  ```
+> Diese `index.html` ist bewusst **self-contained**: Sie funktioniert überall –
+> lokal per Doppelklick, auf GitHub Pages oder jedem Webspace – ohne einen
+> separaten `css/`-Ordner. (Das war die Ursache, falls die Seite mal „unstyled"
+> aussah: Es wurde nur die HTML ohne `css/` hochgeladen.)
 
 ## Deployment
 
-Reine statische Seite – **kein Build nötig**. Den Ordnerinhalt einfach auf einen
-Webspace bzw. Static-Host laden (Netlify, Vercel, Cloudflare Pages, klassisches
-Hosting). Einstiegsdatei ist `index.html`.
+### GitHub Pages
+1. Dateien ins Repo pushen (oder per Web-Upload reinziehen).
+2. **Settings → Pages → Branch: `main` / Root** → Save.
+3. Nach ~1 Min ist die Seite live. Bei Updates hart neu laden (Cmd+Shift+R).
+
+### Beliebiger Webspace / Static-Host
+Einfach `index.html` (für die Link-Vorschau zusätzlich den `assets/`-Ordner)
+hochladen. Kein Build nötig.
 
 ## Bewerbungsformular
 
-Der Versand läuft über **Web3Forms** (Access-Key + Logik am Ende von `index.html`).
+Der Versand läuft über **Web3Forms** (Access-Key + Logik am Ende der `index.html`).
 Die Empfänger-Adresse ist im Web3Forms-Dashboard hinterlegt; für eine eigene
-Empfänger-Adresse dort einen eigenen Key anlegen und eintragen.
+Empfänger-Adresse dort einen eigenen Key anlegen und eintragen. Im Formular wählt
+die/der Bewerber:in die Stelle aus; die „Auf diese Stelle bewerben"-Buttons setzen
+sie automatisch vor.
 
 ## Vor dem Livegang bestätigen
 
 - **Impressum-/Datenschutz-Links** im Footer (zeigen aktuell auf
   `steuerberater-leichtle.de/impressum` bzw. `/datenschutz`).
-- **Stundenumfang / Gehalt / Eintrittstermin** je nach finalem Stellenprofil.
+- **Gehalt / Eintritt** je nach finalem Stellenprofil.
 
-## Als eigenes GitHub-Repo pushen
+## Bearbeiten
 
-Dieses Verzeichnis ist bereits ein Git-Repo mit erstem Commit. Neues, leeres
-Repo auf GitHub anlegen und dann:
-
-```bash
-git remote add origin git@github.com:<DEIN-USER>/<REPO-NAME>.git
-git branch -M main
-git push -u origin main
-```
+Die Seite wird aus einer getrennten Quelle (HTML + CSS) generiert und zu dieser
+Einzeldatei gebündelt. Für Änderungen an Texten/Design bitte bei Ländle Digital
+melden – wir liefern eine aktualisierte `index.html`.
