@@ -2167,6 +2167,10 @@ body.dm-bk-locked { overflow: hidden; }
 .footer .wordmark__name b { color: #fff; }
 .footer .wordmark__sub { color: rgba(255,255,255,.6); }
 
+/* Bild-Logo im Header (ersetzt die Text-Wortmarke, sobald assets/logo.jpg da ist) */
+.brand-logo { height: 46px; width: auto; display: block; }
+@media (max-width: 480px) { .brand-logo { height: 38px; } }
+
 /* --- Hero Trust-Strip ----------------------------------------------------- */
 .trust-strip {
   display: flex;
@@ -2386,8 +2390,8 @@ h1 .amp, h2 .amp, h3 .amp {
 .page-hero .trust-strip__item { color: rgba(255, 255, 255, .92); }
 .page-hero .trust-strip__item svg { color: #fff; }
 
-/* --- Weiche Sektionen leicht ins Rote getönt ------------------------------ */
-.section--soft { background: #fdeef1; }
+/* --- Weiche Sektionen: dezent warmer Ton (kein kräftiges Rosa) ------------ */
+.section--soft { background: #f5f2f0; }
 
 /* --- Benefits-Leiste „auf einen Blick" ------------------------------------ */
 .perks {
@@ -2431,7 +2435,8 @@ h1 .amp, h2 .amp, h3 .amp {
 <header class="topbar">
   <div class="shell topbar__inner">
     <a href="#top" class="topbar__logo" aria-label="Steuerberater Christoph Leichtle – Startseite">
-      <span class="wordmark">
+      <img src="assets/logo.jpg" alt="Christoph Leichtle – Steuerberater" class="brand-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';" />
+      <span class="wordmark" style="display:none;">
         <span class="wordmark__name">CHRISTOPH<b>LEICHTLE</b></span>
         <span class="wordmark__sub">Steuerberater</span>
       </span>
@@ -2514,7 +2519,7 @@ h1 .amp, h2 .amp, h3 .amp {
       <div class="benefit">
         <div class="benefit__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <h3>Faire, sichere Vergütung</h3>
-        <p>Leistungsgerechte Bezahlung plus Urlaubs- und Weihnachtsgeld, unbefristete Festanstellung – ein Arbeitsplatz, der auch in zehn Jahren noch da ist.</p>
+        <p>Leistungsgerechte Bezahlung plus Weihnachtsgeld, unbefristete Festanstellung – ein Arbeitsplatz, der auch in zehn Jahren noch da ist.</p>
       </div>
       <div class="benefit">
         <div class="benefit__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
@@ -2539,8 +2544,8 @@ h1 .amp, h2 .amp, h3 .amp {
     </div>
 
     <div class="perks">
-      <span class="perks__title">Außerdem für alle im Team</span>
-      <span class="perk"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Urlaubs- &amp; Weihnachtsgeld</span>
+      <span class="perks__title">Außerdem</span>
+      <span class="perk"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Weihnachtsgeld</span>
       <span class="perk"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> 50 € Gutschein im Monat</span>
       <span class="perk"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Betriebliche Altersvorsorge</span>
       <span class="perk"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> JobRad-Leasing</span>
@@ -2623,7 +2628,7 @@ h1 .amp, h2 .amp, h3 .amp {
       <div class="job-detail__head">
         <div>
           <span class="job-detail__type"><strong>Festanstellung · Vollzeit</strong> · ab sofort</span>
-          <h3>Steuerfachwirt:in / Steuerfachangestellte:r für Jahresabschlüsse <span class="amp">&amp;</span> Steuererklärungen (m/w/d)</h3>
+          <h3>Steuerfachangestellte:r / Steuerfachwirt:in für Jahresabschlüsse <span class="amp">&amp;</span> Steuererklärungen (m/w/d)</h3>
           <p class="job-detail__lead">
             Du bringst Jahresabschlüsse sauber zu Ende und erstellst Steuererklärungen für
             Unternehmen und Privatpersonen – mit DATEV, klaren Abläufen und Mandanten, die
@@ -2652,10 +2657,9 @@ h1 .amp, h2 .amp, h3 .amp {
         <div class="job-detail__col">
           <h4>Das bringst du mit</h4>
           <ul class="job-detail__list">
-            <li>Ausbildung als Steuerfachwirt:in oder Steuerfachangestellte:r</li>
+            <li>Ausbildung als Steuerfachangestellte:r, gerne mit Fortbildung Steuerfachwirt:in</li>
             <li>Mind. 2 Jahre Berufserfahrung</li>
             <li>Sichere DATEV-Kenntnisse</li>
-            <li>Führerschein Klasse B &amp; Wohnort in der Region</li>
             <li>Sorgfältige, eigenständige Arbeitsweise</li>
           </ul>
         </div>
